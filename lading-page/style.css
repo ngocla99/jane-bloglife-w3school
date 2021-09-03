@@ -1,0 +1,428 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+- Font size system (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+- Font weights
+Default: 400
+Semi-bold: 600
+
+- Line height
+Default: 1
+Paragraph default: 1.5
+--- 02 COLORS
+
+--- 03 BORDER-RADIUS
+Default: 7px
+
+--- 04 WHITESPACE
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/********************************/
+/* GENERAL */
+/********************************/
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  font-size: 1.3rem;
+  background-color: #000;
+}
+
+.main {
+  max-width: 120rem;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  margin-bottom: 3rem;
+  letter-spacing: -1px;
+  font-weight: 600;
+}
+
+.heading-secondary {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 2.4rem;
+}
+
+.text-subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 6.4rem;
+}
+
+.section-why-how {
+  padding: 4.8rem 1.8rem;
+  display: grid;
+  column-gap: 12.8rem;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+/********************************/
+/* SECTION HERO */
+/********************************/
+.section-hero {
+  position: relative;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.hero-download {
+  width: 32%;
+  position: absolute;
+  top: 50%;
+  left: 1.8rem;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  opacity: 0.7;
+  padding: 2.4rem 2rem;
+  border-radius: 7px;
+}
+
+.hero-download:hover {
+  opacity: 1;
+}
+
+.download-title {
+  font-size: 1.9rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.download-line {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 2rem 0;
+}
+
+.download-description {
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+.download-link:link,
+.download-link:visited {
+  display: inline-block;
+  font-weight: 400;
+  background-color: #40c057;
+  color: inherit;
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.download-link:hover,
+.download-link:active {
+  background-color: #f1f1f1;
+  color: #000;
+}
+
+.hero-link:link,
+.hero-link:visited {
+  display: inline-block;
+  background-color: #000;
+  position: absolute;
+  top: 48%;
+  right: 1.8rem;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 5px;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+
+.hero-link:hover,
+.hero-link:active {
+  background-color: #343a40;
+}
+
+.hero-link i {
+  font-size: 1rem;
+}
+
+/********************************/
+/* SECTION WHY */
+/********************************/
+.section-why {
+  grid-template-columns: 3fr 1fr;
+}
+
+.why-subtitle {
+  color: #37b24d;
+}
+
+.content-paragraph {
+  line-height: 1.5;
+  word-spacing: 1.2px;
+  margin-bottom: 2.4rem;
+}
+
+.content-paragraph span {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.download-app:link,
+.download-app:visited {
+  background-color: #f1f1f1;
+  color: #000;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  transition: all 0.3s;
+  margin-bottom: 2.4rem;
+}
+
+.download-app:hover,
+.download-app:active {
+  background-color: #c1c1c1;
+}
+
+.download-app i {
+  font-size: 1.2rem;
+}
+
+.icon {
+  font-size: 1.8rem;
+}
+
+.icon--android {
+  color: #4daf50;
+}
+
+.icon--windows {
+  color: #2d92dd;
+}
+
+.why-img img {
+  width: 100%;
+}
+
+/********************************/
+/* SECTION HOW */
+/********************************/
+.section-how {
+  background-color: #f1f1f1;
+  grid-template-columns: 1fr 3fr;
+  align-items: start;
+}
+
+.how-subtitle {
+  color: #f44336;
+}
+
+.how-title {
+  padding-top: 2.4rem;
+}
+
+/********************************/
+/* SECTION FEATURES */
+/********************************/
+.section-features {
+  background-color: #616161;
+  padding: 8rem 6.4rem 6.4rem;
+  color: #fff;
+  text-align: center;
+}
+
+.features-icons {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* column-gap: 6.4rem; */
+  row-gap: 6.4rem;
+}
+
+.features-icon {
+  font-size: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.features-icon span {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.features-icon:hover {
+  opacity: 0.7;
+}
+
+.bolt {
+  color: #ff9800;
+}
+
+.heart {
+  color: #f44336;
+}
+
+.camera {
+  color: #d2be0e;
+}
+
+.battery {
+  color: #4daf50;
+}
+
+.cloud {
+  color: #2b96f3;
+}
+
+.globe {
+  color: #ffc107;
+}
+
+.hdd {
+  color: #06bad2;
+}
+
+.shield {
+  color: #ff9800;
+}
+
+.wifi {
+  color: #757575;
+}
+
+.image {
+  color: #e93763;
+}
+
+/********************************/
+/* SECTION PRICING */
+/********************************/
+.section-pricing {
+  padding: 8rem 1.8rem 6.4rem;
+  color: #000;
+  text-align: center;
+}
+
+.pricing-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.8rem;
+}
+
+.pricing-content {
+  box-shadow: 0.3rem 0.3rem 1.5rem rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.pricing-content:hover {
+  box-shadow: 0.5rem 0.5rem 1.7rem rgba(0, 0, 0, 0.2);
+}
+
+.pricing-basic p {
+  background-color: #616161;
+}
+.pricing-premium p {
+  background-color: #f44336;
+}
+
+.pricing-title,
+.pricing-benefits li:last-child,
+.pricing-download {
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing-title {
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+.pricing-benefits {
+  list-style-type: none;
+}
+
+.pricing-benefits li {
+  padding: 1.8rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.pricing-benefits li:last-child {
+  font-size: 2.4rem;
+  color: #868e96;
+}
+
+.pricing-download {
+  background-color: #f1f1f1;
+}
+
+.pricing-download a:link,
+.pricing-download a:visited {
+  padding: 1.6rem 2.6rem;
+  background-color: #000;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.pricing-download a:hover,
+.pricing-download a:active {
+  background-color: #bbb;
+  color: #000;
+}
+
+/********************************/
+/* FOOTER */
+/********************************/
+.footer {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding-top: 4.8rem;
+  padding-bottom: 1.4rem;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.footer-social {
+  margin-bottom: 2.4rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-social i {
+  font-size: 2rem;
+}
+
+.footer-social i:hover {
+  color: #ccc;
+}
+
+.footer-text span {
+  text-decoration: underline;
+}
