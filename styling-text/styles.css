@@ -1,0 +1,173 @@
+/* General setup */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header,
+section,
+aside,
+nav,
+footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header,
+footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+/* - Font size system (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+/********************************/
+/* FONTS */
+/********************************/
+@font-face {
+  font-family: 'bodyFont';
+  src: url('fonts/Lovato-Light-webfont.ttf');
+}
+
+@font-face {
+  font-family: 'headingFont';
+  src: url('fonts/josefinslab-bold-webfont.ttf');
+}
+
+/********************************/
+/* GENERAL TEXT STYLING */
+/********************************/
+html {
+  font-size: 10px;
+  font-family: 'bodyFont', serif;
+}
+
+h1,
+h2 {
+  font-family: 'headingFont', sans-serif;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 4.4rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p,
+li {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+}
+
+section h2 + p {
+  text-indent: 20px;
+}
+
+/********************************/
+/* LINK */
+/********************************/
+a:link,
+a:visited {
+  color: #a66;
+}
+
+a:hover,
+a:focus {
+  color: #bb8585;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+a[href^='https'] {
+  background: url('external-link.png') no-repeat right;
+  background-size: 16px 16px;
+  padding-right: 20px;
+}
+
+a:active {
+  background-color: #bb8585;
+  color: #fff;
+}
+
+/********************************/
+/* LISTS */
+/********************************/
+ul,
+ol {
+  margin: 1.6rem 0;
+}
+
+ul {
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: lower-alpha;
+}
+
+/********************************/
+/* NAVIGATION */
+/********************************/
+nav ul {
+  margin-top: 8px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: stretch;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  font-size: 2.4rem;
+  line-height: 3;
+  text-align: center;
+  border: 1px solid #a66;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+  background-color: #bb8585;
+  color: #fff;
+}
